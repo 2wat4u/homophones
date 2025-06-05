@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu des Homophones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Apprenez les Homophones</h1>
+        <nav>
+            <label for="group-select">Choisissez un groupe :</label>
+            <select id="group-select" onchange="updateWords()">
+                <option value="" disabled selected>Veuillez sélectionner un groupe</option>
+                <!-- Les options seront ajoutées dynamiquement -->
+            </select>
+        </nav>
+    </header>
+
+    <div id="temporary-message" class="hidden"></div>
+
+
+
+    <main>
+        <!-- Liste des mots associés -->
+        <section id="word-list-section">
+            <h2>Mots du groupe sélectionné</h2>
+            <div id="word-list">
+                <!-- Les mots associés avec des cases à cocher apparaîtront ici -->
+            </div>
+            <button id="apply-filter">Appliquer le filtre</button>
+        </section>
+
+        <!-- Génération de la phrase -->
+        <section id="phrase-section">
+            <h2>Complétez la phrase</h2>
+            <div id="generated-phrase">
+                <!-- La phrase générée apparaîtra ici -->
+            </div>
+        </section>
+
+        <!-- Saisie utilisateur -->
+        <section id="input-section">
+            <h2>Votre réponse</h2>
+            <input type="text" id="user-input" placeholder="Entrez le mot ici" />
+            <button id="validate-button">Valider</button>
+            <p id="feedback-message"></p>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Apprendre les homophones - Un outil éducatif interactif</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

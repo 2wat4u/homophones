@@ -1,0 +1,259 @@
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav {
+
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+
+
+}
+
+nav select,
+nav input,
+nav button {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+/* --- Main Content --- */
+main {
+    margin: 2rem auto;
+    max-width: 50%;
+    padding: 2rem;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+h2 {
+    color: #555;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* --- Word List Section --- */
+#word-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.word-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #e7f3fe;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+#input-section {
+    text-align: center;
+    /* Centre les éléments horizontalement */
+    margin: auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+#input-section input {
+    display: block;
+    /* Place l'input sur une ligne complète */
+    width: 80%;
+    /* Largeur relative */
+    max-width: 300px;
+    /* Largeur maximale */
+    margin: 0 auto 15px;
+    /* Centrage horizontal et espacement en bas */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#validate-button {
+    display: block;
+    /* Place le bouton sur une ligne complète */
+    margin: 10px auto;
+    /* Centrage horizontal */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#validate-button:hover {
+    background-color: #45a049;
+}
+
+#generated-phrase {
+    font-size: 1.2rem;
+    /* Augmentez la taille de la police */
+    /* Rend la phrase plus visible */
+    color: #333;
+    /* Une couleur adaptée au design */
+    text-align: center;
+    /* Centre la phrase horizontalement */
+    margin: 20px 0;
+    /* Ajoute de l'espacement autour de la phrase */
+}
+
+
+
+
+/* --- Buttons --- */
+button {
+    margin: 15px 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+button#valider {
+    background-color: #597461;
+    color: white;
+}
+
+button#valider:hover {
+    background-color: #4f6555;
+}
+
+button#sauter {
+    background-color: #cb9a06;
+    color: white;
+}
+
+button#sauter:hover {
+    background-color: #b98804;
+}
+
+/* --- Fade-In Animation --- */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    20%,
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fadeInOut 2s ease-in-out;
+}
+
+/* --- Temporary Message --- */
+#temporary-message {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 1000;
+    display: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+        /* Légère réduction au début */
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        /* Retour à la taille normale */
+    }
+}
+
+/* Classe pour appliquer l'animation */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+    /* Durée de 0.5s, avec une transition douce */
+}
